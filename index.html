@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jatin Sharma — Business Strategist & Researcher</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;color:#1a1a1a;background:#fff;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,8,8,0.96);backdrop-filter:blur(10px);padding:16px 32px;display:flex;justify-content:space-between;align-items:center;}
+.nav-logo{font-size:15px;font-weight:600;color:#fff;letter-spacing:0.5px;}
+.nav-logo span{color:#C9960C;}
+.nav-links{display:flex;gap:28px;}
+.nav-links a{color:#888;font-size:13px;text-decoration:none;}
+.nav-links a:hover{color:#C9960C;}
+.nav-cta{background:#C9960C;color:#0a0a0a;font-size:13px;font-weight:600;padding:8px 20px;border-radius:4px;text-decoration:none;}
+.nav-cta:hover{background:#e0aa0f;}
+.hero{background:#080808;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px;}
+.hero-badge{display:inline-block;border:1px solid #3a2f10;color:#C9960C;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;padding:7px 20px;border-radius:30px;margin-bottom:32px;}
+.hero h1{font-size:56px;font-weight:600;color:#fff;line-height:1.1;margin-bottom:20px;letter-spacing:-1px;}
+.hero h1 span{color:#C9960C;}
+.hero-desc{font-size:17px;color:#777;max-width:540px;margin:0 auto 40px;line-height:1.85;}
+.hero-desc strong{color:#bbb;}
+.hero-pills{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:48px;}
+.pill{background:#111;border:1px solid #2a2a2a;color:#777;font-size:12px;padding:6px 16px;border-radius:20px;}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-gold{background:#C9960C;color:#0a0a0a;font-weight:600;font-size:14px;padding:14px 32px;border-radius:5px;text-decoration:none;border:none;cursor:pointer;font-family:inherit;}
+.btn-gold:hover{background:#e0aa0f;}
+.btn-outline{background:transparent;color:#666;font-size:14px;padding:14px 32px;border-radius:5px;text-decoration:none;border:1px solid #2a2a2a;}
+.btn-outline:hover{border-color:#C9960C;color:#C9960C;}
+.stats-bar{background:#0c0c0c;border-top:1px solid #161616;border-bottom:1px solid #161616;padding:36px 24px;}
+.stats-inner{max-width:680px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);}
+.stat-item{text-align:center;border-right:1px solid #1a1a1a;}
+.stat-item:last-child{border-right:none;}
+.stat-num{font-size:30px;font-weight:700;color:#C9960C;}
+.stat-label{font-size:10px;color:#444;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;}
+section{padding:80px 24px;}
+.container{max-width:700px;margin:0 auto;}
+.sec-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#C9960C;margin-bottom:12px;font-weight:600;}
+.sec-title{font-size:30px;font-weight:600;color:#111;margin-bottom:18px;line-height:1.25;}
+.sec-body{font-size:15px;color:#555;line-height:1.85;}
+.who{background:#fff;}
+.who-highlight{background:#fdfaf2;border-left:3px solid #C9960C;padding:20px 24px;border-radius:0 8px 8px 0;margin-top:28px;font-size:15px;color:#555;line-height:1.75;font-style:italic;}
+.journey{background:#f9f9f9;}
+.timeline{margin-top:40px;}
+.tl-item{display:flex;gap:24px;padding-bottom:36px;}
+.tl-item:last-child{padding-bottom:0;}
+.tl-left{display:flex;flex-direction:column;align-items:center;width:36px;flex-shrink:0;}
+.tl-dot{width:10px;height:10px;border-radius:50%;background:#C9960C;flex-shrink:0;margin-top:6px;}
+.tl-line{width:1px;background:#ddd;flex:1;margin-top:6px;}
+.tl-item:last-child .tl-line{display:none;}
+.tl-year{font-size:11px;font-weight:700;color:#C9960C;letter-spacing:1px;margin-bottom:4px;text-transform:uppercase;}
+.tl-title{font-size:15px;font-weight:600;color:#111;margin-bottom:4px;}
+.tl-desc{font-size:13px;color:#666;line-height:1.65;}
+.services{background:#fff;}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:16px;margin-top:36px;}
+.svc-card{border:1px solid #eee;border-radius:10px;padding:24px 20px;transition:border-color 0.2s;}
+.svc-card:hover{border-color:#C9960C;}
+.svc-icon{font-size:22px;color:#C9960C;margin-bottom:12px;}
+.svc-title{font-size:14px;font-weight:600;color:#111;margin-bottom:6px;}
+.svc-desc{font-size:12px;color:#777;line-height:1.6;}
+.industries{background:#f9f9f9;}
+.ind-wrap{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
+.ind-tag{background:#fff;border:1px solid #e5e5e5;border-radius:20px;padding:7px 16px;font-size:13px;color:#555;}
+.form-sec{background:#080808;padding:80px 24px;}
+.form-sec .sec-title{color:#fff;}
+.form-sec .sec-body{color:#666;}
+.form-card{background:#0f0f0f;border:1px solid #1a1a1a;border-radius:12px;padding:40px 36px;margin-top:36px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.fg{margin-bottom:18px;}
+.fg label{display:block;font-size:10px;font-weight:600;color:#555;margin-bottom:7px;letter-spacing:1.5px;text-transform:uppercase;}
+.fg input,.fg select,.fg textarea{width:100%;font-size:14px;color:#ccc;background:#080808;border:1px solid #1f1f1f;border-radius:6px;padding:11px 14px;font-family:inherit;outline:none;}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:#C9960C;}
+.fg select option{background:#0f0f0f;color:#ccc;}
+.fg textarea{min-height:110px;resize:vertical;}
+.submit-btn{width:100%;background:#C9960C;color:#0a0a0a;font-weight:700;font-size:15px;padding:15px;border:none;border-radius:6px;cursor:pointer;margin-top:8px;font-family:inherit;}
+.submit-btn:hover{background:#e0aa0f;}
+.submit-btn:disabled{opacity:0.5;cursor:not-allowed;}
+.success-box{display:none;background:#0a1a0c;border:1px solid #1a3a1e;border-radius:8px;padding:24px;text-align:center;color:#4caf50;font-size:15px;margin-top:16px;line-height:1.7;}
+footer{background:#050505;padding:40px 24px;text-align:center;border-top:1px solid #0f0f0f;}
+.footer-name{font-size:16px;font-weight:600;color:#fff;margin-bottom:4px;}
+.footer-name span{color:#C9960C;}
+.footer-sub{font-size:12px;color:#444;margin-bottom:14px;}
+.footer-links{display:flex;gap:20px;justify-content:center;margin-bottom:14px;}
+.footer-links a{color:#555;font-size:13px;text-decoration:none;}
+.footer-links a:hover{color:#C9960C;}
+.footer-copy{font-size:11px;color:#2a2a2a;}
+@media(max-width:600px){
+  .hero h1{font-size:36px;}
+  .stats-inner{grid-template-columns:repeat(2,1fr);gap:20px;}
+  .stat-item{border-right:none;border-bottom:1px solid #1a1a1a;padding-bottom:16px;}
+  .stat-item:nth-child(3),.stat-item:last-child{border-bottom:none;}
+  .form-row{grid-template-columns:1fr;}
+  .form-card{padding:24px 18px;}
+  .nav-links{display:none;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Jatin <span>Sharma</span></div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#journey">Journey</a>
+    <a href="#services">Services</a>
+    <a href="#consult">Connect</a>
+  </div>
+  <a href="#consult" class="nav-cta">Get in touch</a>
+</nav>
+
+<div class="hero">
+  <div>
+    <div class="hero-badge">Business Strategist & Researcher</div>
+    <h1>Jatin <span>Sharma</span></h1>
+    <p class="hero-desc">Your business has a problem.<br><strong>There's a person who has seen it before.</strong><br><br>8 years. Multiple industries. Real businesses. Real fixes.<br>From raw idea to functional business — that's the work.</p>
+    <div class="hero-pills">
+      <span class="pill">Strategy Planning</span>
+      <span class="pill">Brand Research</span>
+      <span class="pill">Business Diagnosis</span>
+      <span class="pill">Startup Mentorship</span>
+      <span class="pill">Writing Startups</span>
+    </div>
+    <div class="hero-btns">
+      <a href="#consult" class="btn-gold">Tell me about your business</a>
+      <a href="#journey" class="btn-outline">See my journey</a>
+    </div>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item"><div class="stat-num">8+</div><div class="stat-label">Years in business</div></div>
+    <div class="stat-item"><div class="stat-num">10+</div><div class="stat-label">Ventures involved</div></div>
+    <div class="stat-item"><div class="stat-num">5+</div><div class="stat-label">Industries</div></div>
+    <div class="stat-item"><div class="stat-num">200+</div><div class="stat-label">Clients managed</div></div>
+  </div>
+</div>
+
+<section class="who" id="about">
+  <div class="container">
+    <div class="sec-label">Who is this</div>
+    <div class="sec-title">Not a consultant.<br>Someone who's been there.</div>
+    <div class="sec-body">Over the past 8 years, Jatin has started businesses, worked inside businesses, fixed businesses, and helped others build theirs — across F&B, real estate, manufacturing, construction, and premium consumer brands.<br><br>He has mentored student startups, guided early-stage founders, written business strategies from scratch, and turned around struggling operations. He understands what it takes to convert a raw idea into a working business — and what to do when a working business stops working.<br><br>If you have an idea, a problem, or a plan that needs sharpening — fill the form below.</div>
+    <div class="who-highlight">"I don't just write strategies. I've lived them — in the market, on the ground, across industries. That's the difference."</div>
+  </div>
+</section>
+
+<section class="journey" id="journey">
+  <div class="container">
+    <div class="sec-label">8 Years</div>
+    <div class="sec-title">A journey built on real business.</div>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div>
+          <div class="tl-year">2018 — Age 14</div>
+          <div class="tl-title">Co-founded an Indo-Chinese Cafe</div>
+          <div class="tl-desc">First venture at 14. Learned F&B operations, vendor management, and customer experience from day one. Ran it through the Covid years — sold in 2022 after the market impact.</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div>
+          <div class="tl-year">2020 — Onwards</div>
+          <div class="tl-title">Real estate, construction & dog breeding</div>
+          <div class="tl-desc">Worked part-time across real estate sales, property operations, construction business management, and a dog breeding venture — building cross-industry experience across multiple parallel business models.</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div>
+          <div class="tl-year">2023</div>
+          <div class="tl-title">Business turnaround — PVC wire manufacturing</div>
+          <div class="tl-desc">Diagnosed a failing unit. Root cause: 90% of production dispatched as unconfirmed samples with no purchase orders. Restructured from B2C to direct B2B with government contractors and builders. Restored full profitability. 200+ active clients across 180+ projects in Delhi NCR.</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div>
+          <div class="tl-year">2026 — Present</div>
+          <div class="tl-title">Business Strategist & Researcher — PU Copper</div>
+          <div class="tl-desc">Handling brand strategy, market research, and go-to-market for PU Copper Mineral Water — a premium Himalayan copper-infused brand targeting global markets including Sydney, Dubai, Toronto, and Berlin.</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div>
+          <div class="tl-year">Ongoing</div>
+          <div class="tl-title">Mentoring startups & helping businesses grow</div>
+          <div class="tl-desc">Across 8 years — mentored student ventures, early-stage startups, and small businesses in tech, F&B, services, water brands, and more. Helped convert raw ideas into structured, functional businesses.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="sec-label">What I do</div>
+    <div class="sec-title">How I help your business.</div>
+    <div class="svc-grid">
+      <div class="svc-card"><div class="svc-icon"><i class="ti ti-zoom-money"></i></div><div class="svc-title">Business diagnosis</div><div class="svc-desc">Find exactly what's broken and why — before making any move.</div></div>
+      <div class="svc-card"><div class="svc-icon"><i class="ti ti-route"></i></div><div class="svc-title">Strategy planning</div><div class="svc-desc">A clear, step-by-step roadmap from where you are to where you want to be.</div></div>
+      <div class="svc-card"><div class="svc-icon"><i class="ti ti-telescope"></i></div><div class="svc-title">Brand & market research</div><div class="svc-desc">Market positioning, competitor mapping, and brand clarity before you spend.</div></div>
+      <div class="svc-card"><div class="svc-icon"><i class="ti ti-bulb"></i></div><div class="svc-title">Startup mentorship</div><div class="svc-desc">Raw idea to real business — structured, validated, and ready to execute.</div></div>
+      <div class="svc-card"><div class="svc-icon"><i class="ti ti-arrows-exchange"></i></div><div class="svc-title">Business turnaround</div><div class="svc-desc">When the current model isn't working — restructure, reposition, rebuild.</div></div>
+      <div class="svc-card"><div class="svc-icon"><i class="ti ti-writing"></i></div><div class="svc-title">Writing startups</div><div class="svc-desc">Business plans, pitch decks, and strategic documents — from idea to paper.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="industries">
+  <div class="container">
+    <div class="sec-label">Experience across</div>
+    <div class="sec-title">Industries I've worked in.</div>
+    <div class="ind-wrap">
+      <span class="ind-tag">F&B / Restaurants</span>
+      <span class="ind-tag">Real Estate</span>
+      <span class="ind-tag">Manufacturing</span>
+      <span class="ind-tag">Construction</span>
+      <span class="ind-tag">D2C / Consumer Brands</span>
+      <span class="ind-tag">Premium / Luxury</span>
+      <span class="ind-tag">Tech Startups</span>
+      <span class="ind-tag">Housekeeping Services</span>
+      <span class="ind-tag">Student Ventures</span>
+      <span class="ind-tag">Water & Beverages</span>
+    </div>
+  </div>
+</section>
+
+<div class="form-sec" id="consult">
+  <div class="container">
+    <div class="sec-label">Get in touch</div>
+    <div class="sec-title">Tell me about your business.</div>
+    <div class="sec-body">Fill in the details below. Every submission is read personally — you'll hear back within 24 hours.</div>
+    <div class="form-card">
+      <form id="strategyForm" action="https://formspree.io/f/xzdlgkdg" method="POST">
+        <div class="form-row">
+          <div class="fg"><label>Your name</label><input type="text" name="name" placeholder="Rahul Sharma" required></div>
+          <div class="fg"><label>Your email</label><input type="email" name="email" placeholder="rahul@company.com" required></div>
+        </div>
+        <div class="form-row">
+          <div class="fg"><label>Business name</label><input type="text" name="business_name" placeholder="My Venture Pvt. Ltd."></div>
+          <div class="fg"><label>Industry</label>
+            <select name="industry" required>
+              <option value="">Select industry</option>
+              <option>F&B / Restaurant</option>
+              <option>Real Estate</option>
+              <option>Manufacturing</option>
+              <option>D2C / Consumer Brand</option>
+              <option>Tech / SaaS</option>
+              <option>Retail</option>
+              <option>Services</option>
+              <option>Construction</option>
+              <option>Healthcare</option>
+              <option>Education / EdTech</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="fg"><label>Business stage</label>
+            <select name="stage" required>
+              <option value="">Select stage</option>
+              <option>Idea / Pre-launch</option>
+              <option>Early stage (0–1 year)</option>
+              <option>Growing (1–3 years)</option>
+              <option>Struggling / Stuck</option>
+              <option>Scaling</option>
+            </select>
+          </div>
+          <div class="fg"><label>Main challenge</label>
+            <select name="challenge">
+              <option value="">Select challenge</option>
+              <option>Business strategy</option>
+              <option>Revenue & growth</option>
+              <option>Operations & systems</option>
+              <option>Brand & marketing</option>
+              <option>Business model</option>
+              <option>Startup idea</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="fg"><label>Tell me about your business & what you need help with</label>
+          <textarea name="description" placeholder="Describe your business — what's working, what's not, and what you want to achieve. The more detail, the better." required></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="New Strategy Inquiry — Jatin Sharma">
+        <button type="submit" class="submit-btn" id="submitBtn">Submit — I'll be in touch within 24 hours</button>
+      </form>
+      <div class="success-box" id="successMsg">
+        Your inquiry has been received.<br>
+        Jatin will reach out to you personally within 24 hours.<br><br>
+        <span style="color:#555;font-size:13px;">jatinxworkspace@gmail.com</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-name">Jatin <span>Sharma</span></div>
+  <div class="footer-sub">Business Strategist & Researcher · Delhi NCR, India</div>
+  <div class="footer-links">
+    <a href="mailto:jatinxworkspace@gmail.com">jatinxworkspace@gmail.com</a>
+    <a href="https://www.linkedin.com/in/jatin-sharma-a3b90a3b5" target="_blank">LinkedIn</a>
+    <a href="https://jatin-sharma-ba.github.io/portfolio/" target="_blank">Portfolio</a>
+  </div>
+  <div class="footer-copy">© 2026 Jatin Sharma. All rights reserved.</div>
+</footer>
+
+<script>
+document.getElementById('strategyForm').addEventListener('submit',async function(e){
+  e.preventDefault();
+  const btn=document.getElementById('submitBtn');
+  btn.textContent='Sending...';
+  btn.disabled=true;
+  try{
+    const res=await fetch(this.action,{method:'POST',body:new FormData(this),headers:{Accept:'application/json'}});
+    if(res.ok){
+      this.style.display='none';
+      document.getElementById('successMsg').style.display='block';
+    } else {
+      btn.textContent='Something went wrong. Try again.';
+      btn.disabled=false;
+    }
+  } catch(err){
+    btn.textContent='Something went wrong. Try again.';
+    btn.disabled=false;
+  }
+});
+</script>
+</body>
+</html>
